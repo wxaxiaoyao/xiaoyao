@@ -1,8 +1,6 @@
 
 #!/bin/bash
 
-#!/bin/bash
-
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
@@ -13,7 +11,11 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'The-NERD-tree'
+Plugin 'Auto-Pairs'               " 括号自动配对
+Plugin 'The-NERD-tree'            " 目录树
+Plugin 'godlygeek/tabular'        " 文本对齐  :Tab / "
+Plugin 'plasticboy/vim-markdown'  " markdown插件
+Plugin 'scrooloose/nerdcommenter' " 代码注释
 call vundle#end()
 filetype plugin indent on
 

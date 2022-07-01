@@ -13,14 +13,14 @@ if [ ! -d ${LIB_SRC_DIR} ]; then
 	if [ -f ${LIB_SRC_TAR_GZ} ]; then
 		tar -vxf ${LIB_SRC_TAR_GZ} -C ${SOURCE_DIR}
 	else
-		https://mirrors.aliyun.com/gnu/gcc/${LIB_NAME}/${LIB_NAME}.tar.gz -O ${LIB_SRC_TAR_GZ}
+		wget https://mirrors.aliyun.com/gnu/gcc/${LIB_NAME}/${LIB_NAME}.tar.gz -O ${LIB_SRC_TAR_GZ}
 		tar -vxf ${LIB_SRC_TAR_GZ} -C ${SOURCE_DIR}
 	fi
 fi
 
 cd ${LIB_SRC_DIR}
 ./contrib/download_prerequisites
-mkdir build && cd build && ../configure --disable-multilib
+mkdir -p build && cd build && ../configure --disable-multilib
 make
 make install
 
