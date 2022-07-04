@@ -33,10 +33,15 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set showtabline=1
+set autochdir                                      " 自动切换当前目录为当前文件所在的目录
+set ignorecase smartcase                           " 查找忽略大小写 但在有一个或以上大写字母时仍保持对大小写敏感
+set incsearch                                      " 输入搜索内容时就显示搜索结果
+set incsearch                                      " 输入搜索内容时就显示搜索结果
 set encoding=utf-8                                 " Vim 的内部编码
 set termencoding=utf-8                             " Vim 在与屏幕/键盘交互时使用的编码(取决于实际的终端的设定)
 set fileencoding=utf-8                             " Vim 当前编辑的文件在存储时的编码
 set fileencodings=ucs-bom,utf-8,gbk,default,latin1 " Vim 打开文件时的尝试使用的编码
+set completeopt=longest,menu                       " 补全菜单样式
 
 EOF
 
